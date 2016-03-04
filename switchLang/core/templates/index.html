@@ -1,0 +1,14 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language_info for LANGUAGE_CODE as lang %}
+{% get_available_languages as LANGUAGES %}
+<br/>
+{% blocktrans %}
+	这句话含有 '{{ output }}'. 
+{% endblocktrans %}
+<br/>
+{% trans "你好." %}
+	
+<br/>
+Name of language: {{ lang.name_local }}<br />
+Name in English: {{ lang.name }}<br />
